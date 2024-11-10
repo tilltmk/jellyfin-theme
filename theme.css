@@ -1,0 +1,542 @@
+/* Grundlegende Einstellungen */
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 12pt;
+    background-color: #02010A;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFFFFF;
+}
+
+/* Animierter Hintergrund */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #04052E, #140152, #22007C, #0D00A4);
+    background-size: 300% 300%;
+    animation: gradient-animation 12s ease infinite;
+    filter: blur(20px);
+    z-index: -1;
+    opacity: 0.7;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Überlagerung für Glassmorphism */
+.backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 1, 10, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Hauptcontainer */
+.mainContainer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    background: rgba(4, 5, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(34, 0, 124, 0.7);
+}
+
+/* Beispiel für interaktive Karte */
+.card {
+    background: rgba(20, 1, 82, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(13, 0, 164, 0.5);
+    color: #FFFFFF;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #140152, #22007C);
+    box-shadow: 0 0 20px #0D00A4;
+}
+
+/* Limit Custom CSS code box size */
+#txtCustomCss, #txtLocalCustomCss {
+    height: 400px !important;
+    max-height: none !important;
+    overflow-y: scroll !important;
+    resize: vertical !important;
+}
+
+.customCssContainer textarea {
+    height: auto !important;
+}
+
+/* Dashboard*/
+#user_usage_report_table,
+.detailTable {
+    background: rgba(0,0,0,.5);
+}
+
+.detailTableBodyRow-shaded {
+    background: #0000 !important;
+}
+
+.infoBanner {
+    background: #101010;
+}
+
+.navMenuOptionText {
+    margin-top: 0;
+}
+
+.backgroundProgress > div {
+    background-color: #0000;
+}
+
+.visualCardBox, .cardImageContainer {
+    box-shadow: none;
+}
+
+/* Switch Styles */
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__track {
+    background: rgba(120, 120, 120, 0.6);
+}
+
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__thumb {
+    background: white;
+}
+
+/* Dashboard Section Styles */
+.dashboardSection h3 {
+    margin-left: 0.5em;
+}
+
+.sessionCardFooter {
+    border: none;
+}
+
+.paperList, 
+.visualCardBox {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.listItem-border {
+    border-color: rgba(255, 255, 255, 0) !important; 
+}
+
+fieldset {
+    border: 1px solid rgba(4, 4, 4, 0.8); 
+    border-radius: 0.4em;
+}
+
+/* DetailRibbon transparency */
+.layout-desktop .detailRibbon {
+    background: rgba(255,255,255,.1) !important;
+    height: 6em;
+}
+
+.itemBackdrop::after {
+    background: rgba(0,0,0,.1) !important;
+}
+
+/* Footer and Player Styles */
+.appfooter {
+    background: rgba(0,0,0,0.9);
+}
+
+.button-flat:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+/* Progress Bar Styles */
+progress {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 0px solid rgba(255, 255, 255, 0.22);
+}
+
+progress::-moz-progress-bar {
+    background-color: rgba(255,255,255,0.75);
+}
+
+progress::-webkit-progress-value {
+    background-color: rgba(255,255,255,0.75);
+}
+
+/* Task Progress Styles */
+.taskProgressOuter {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.taskProgressInner {
+    background: rgba(255,255,255,0.75) !important;
+}
+
+#scheduledTasksPage span {
+    color: rgba(255,255,255,0.75) !important;
+}
+
+/* Card Indicators und Footer */
+.innerCardFooter {
+    background: #2f1b57b8;
+    box-shadow: none;
+    margin: .5em;
+}
+
+.countIndicator {
+    background: linear-gradient(90deg, rgb(40.392% 6.275% 50.98%) 0%, rgb(40.023% 6.794% 51.27%) 6.25%, rgb(38.929% 8.334% 52.13%) 12.5%, rgb(37.154% 10.835% 53.525%) 18.75%, rgb(34.764% 14.2% 55.403%) 25%, rgb(31.852% 18.3% 57.69%) 31.25%, rgb(28.53% 22.978% 60.301%) 37.5%, rgb(24.925% 28.054% 63.133%) 43.75%, rgb(21.176% 33.333% 66.078%) 50%, rgb(17.428% 38.612% 69.024%) 56.25%, rgb(13.823% 43.688% 71.856%) 62.5%, rgb(10.501% 48.366% 74.466%) 68.75%, rgb(7.589% 52.467% 76.754%) 75%, rgb(5.199% 55.832% 78.632%) 81.25%, rgb(3.423% 58.332% 80.027%) 87.5%, rgb(2.33% 59.872% 80.886%) 93.75%, rgb(1.961% 60.392% 81.176%) 100%);
+    box-shadow: none;
+}
+
+/* Media Source Indicator */
+.mediaSourceIndicator {
+    background: rgba(0,0,0,0.4);
+    box-shadow: none;
+    border-radius: var(--rounding);
+}
+
+/* Input Fields und Forms */
+.emby-input,
+.emby-textarea {
+    padding: .4em .55em;
+    background: rgba(0, 0, 0, 0.2); 
+    border: 0.01em solid rgba(255, 255, 255, 0.22);
+}
+
+.emby-select {
+    padding: .35em 1.9em .35em .35em;
+}
+
+.selectArrow {
+    margin-top: 1.05em;
+}
+
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select-withcolor:focus {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0.01em solid rgba(var(--selection), 0.8) !important;
+}
+
+/* Checkbox Styles */
+.emby-checkbox:checked + span + .checkboxOutline {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 0.01em solid rgba(var(--selection), 0.8) !important;
+}
+
+/* Layout Specific Styles */
+.layout-mobile .detailPageContent {
+    padding-left: 5%;
+    padding-right: 0%;
+}
+
+.layout-mobile .adminDrawerLogo {
+    border-bottom: none;
+}
+
+.layout-mobile .itemBackdrop {
+    margin-top: 0rem;
+}
+
+/* Portrait Orientation Styles */
+@media (orientation: portrait) {
+    .layout-mobile .itemBackdrop {
+        display: block;
+        animation: backdrop-fadein .8s ease-in normal both;
+        background-attachment: fixed;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0;
+        margin-top: 0rem;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    #itemDetailPage .detailLogo {
+        position: static;
+        margin-left: 40%;
+        display: block;
+        filter: drop-shadow(0 0 10px rgba(2, 2, 2, 0.75));
+        flex-shrink: 0;
+        background-position: 0 70%;
+        margin-top: -18vh;
+        margin-bottom: 1vh;
+        width: 50vw;
+    }
+
+    .itemDetailPage {
+        padding-top: 13em !important;
+    }
+}
+
+
+/* Landscape Orientation Styles */
+@media (orientation: landscape) {
+    .layout-mobile .itemBackdrop {
+        display: block;
+        animation: backdrop-fadein .8s ease-in normal both;
+        background-attachment: fixed;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0;
+        margin-top: 0rem;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .layout-desktop .detailLogo {
+        position: static;
+        margin-left: 32.5%;
+        margin-right: 10%;
+        display: block;
+        filter: drop-shadow(0 0 10px rgba(2, 2, 2, 0.75));
+        width: 64vw;
+        max-height: 21em;
+        height: 26vw;
+        margin-top: -23.95em;
+        margin-bottom: 3em;
+    }
+}
+
+/* Root Variables */
+:root {
+    --accent: 6, 161, 217;
+    --rounding: 12px;
+}
+
+/* Hover Effects */
+.layout-desktop .homeLibraryButton:hover,
+.layout-desktop .homeLibraryButton:focus,
+.layout-desktop .card:hover,
+.layout-desktop .card:focus {
+    filter: none !important;
+    box-shadow: 0 0 5px 0, 255, 222;
+    transform: scale(1.05);
+    transition: transform 1s ease;
+}
+
+/* Backdrop Image */
+.backdropImage {
+    filter: blur(0px) saturate(120%) contrast(130%) brightness(100%);
+}
+
+/* List Item Styles */
+.listItem {
+    text-align: center;
+    padding: 10px;
+    font-size: 12pt;
+}
+
+.listItemIcon {
+    display: none;
+    padding: 10px;
+}
+
+/* Hide Specific Elements */
+.detailsGroupItem.genresGroup,
+.detailsGroupItem.writersGroup,
+.itemTags,
+#seriesScheduleSection {
+    display: none;
+}
+
+/* Video Player Controls */
+.videoOsdBottom .osdControls [dir="ltr"] .paper-icon-button-light {
+    position: fixed;
+    top: 49vh;
+    left: 30vw;
+    font-size: 2vw;
+    transition: font-size 0.1s ease-in-out;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* Media Queries for Video Controls */
+@media (max-width: 33.75em) {
+    .videoOsdBottom .paper-icon-button-light {
+        font-size: 3vw !important;
+    }
+    .videoOsdBottom .paper-icon-button-light:hover {
+        font-size: 3.2vw !important;
+    }
+}
+
+/* Skip Intro Button */
+#skipIntro {
+    position: absolute;
+    bottom: 7em;
+    right: 7em;
+    background-color: transparent;
+}
+
+#skipIntro .emby-button {
+    color: #ffffff;
+    font-size: 100%;
+    background: rgb(0, 0, 0);
+    border: 0px solid #2c4177;
+}
+
+#skipIntro .emby-button:hover, 
+#skipIntro .emby-button:focus {
+    background: linear-gradient(to right, rgb(103, 16, 130), rgb(4, 130, 175)) !important;
+    transform: scale(1.05);
+}
+
+/* Up Next Container */
+.upNextContainer {
+    bottom: 5em;
+}
+
+.raised.raised-mini.btnHide.upNextDialog-button.emby-button:hover {
+    background: linear-gradient(to right, rgb(103, 16, 130), rgb(4, 130, 175)) !important;
+    box-shadow: 0 0 8px rgba(var(--accent), 0.6);
+    filter: brightness(1.2);
+    background-color: #041331;
+    transform: scale(1.05);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--accent),0.8) !important;
+}
+
+* {
+    scrollbar-color: rgba(var(--accent),0.8) #0000 !important;
+}
+
+/* Glass Effect Support */
+@supports (backdrop-filter: blur(15px)) {
+    .dialog,
+    .mainDrawer,
+    .toast,
+    .appfooter {
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* Hauptcontainer Styling */
+#indexPage {
+    background: linear-gradient(90deg, #04052E, #140152, #22007C, #0D00A4);
+    background-size: 300% 300%;
+    animation: gradient-animation 12s ease infinite;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Animation für den Hintergrund */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Sektionen-Container */
+.sections {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Vertikale Sektionen */
+.verticalSection {
+    margin-bottom: 2em;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 1em;
+    backdrop-filter: blur(10px);
+}
+
+/* Sektions-Titel */
+.sectionTitle {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    padding-left: 0.5em;
+    border-left: 4px solid rgba(6, 161, 217, 0.8);
+}
+
+/* Karten-Container */
+.itemsContainer {
+    display: flex;
+    gap: 1.5em;
+    padding: 1em 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* Einzelne Karte */
+.card {
+    min-width: 200px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Karten-Bild-Container */
+.cardImageContainer {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+/* Karten-Icons */
+.cardImageIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Karten-Text */
+.cardText {
+    padding: 2em;
+    text-align: center;
+}
+
+.cardText a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+}
